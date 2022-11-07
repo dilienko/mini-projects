@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILLIONAIRE</title>
+    <link rel="shortcut icon" href="../images/millionaire-icon.png" type="image/png">
+    <link rel="stylesheet" href="../styles/millionaire.css">
+</head>
+<body>
+    <div class="millionaire">
+        <div class="millionaire__logo">
+            <img src="../images/logo.png" alt="millionaire logo">
+        </div>
+        <div class="millionaire__center-line">
+            <div class="millionaire__hints-mobile">
+                <button class="millionaire__hint fifty-fifty">50/50</button>
+                <button class="millionaire__hint friend-help">&#128587;</button>
+            </div>
+            <div class="millionaire__timer">60</div>
+            <div class="millionaire-prize-mobile">$0</div>
+        </div>
+        <div class="millionaire__question">
+            <p class="millionaire__question-text"></p>
+        </div>
+        <div class="millionaire__answers">
+            <div class="millionaire__answer">
+                <span>A:</span>
+                <button class="millionaire__answer-text"></button>
+            </div>
+            <div class="millionaire__answer">
+                <span>B:</span>
+                <button class="millionaire__answer-text"></button>
+            </div>
+            <div class="millionaire__answer">
+                <span>C:</span>
+                <button class="millionaire__answer-text"></button>
+            </div>
+            <div class="millionaire__answer">
+                <span>D:</span>
+                <button class="millionaire__answer-text"></button>
+            </div>
+        </div>
+        <div class="millionaire__prize">
+            <span class="millionaire__sum">$100</span>
+            <span class="millionaire__sum">$200</span>
+            <span class="millionaire__sum">$300</span>
+            <span class="millionaire__sum">$500</span>
+            <span class="millionaire__sum">$1000</span>
+            <span class="millionaire__sum">$2000</span>
+            <span class="millionaire__sum">$4000</span>
+            <span class="millionaire__sum">$8000</span>
+            <span class="millionaire__sum">$16000</span>
+            <span class="millionaire__sum">$32000</span>
+            <span class="millionaire__sum">$64000</span>
+            <span class="millionaire__sum">$125000</span>
+            <span class="millionaire__sum">$250000</span>
+            <span class="millionaire__sum">$500000</span>
+            <span class="millionaire__sum">$1000000</span>
+        </div>
+
+        <div class="millionaire__hints">
+            <button class="millionaire__hint fifty-fifty">50/50</button>
+            <button class="millionaire__hint friend-help">&#128587;</button>
+        </div>
+    </div>
+
+    <div class="wrapper" id="start-modal">
+        <div class="modal">
+            <div class="modal-header">ЛАСКАВО ПРОСИМО!</div>
+            <div class="modal-main">
+                <p>Вітаємо у грі "Хто хоче стати мільйонером". Ви отримаєте 1000000$, якщо правильно відповісте на 15 запитань</p>
+                <p>На 5-й та 10-й грі ви отримуєте неспалимі суми, які залишаються у вас навіть у випадку програшу</p>
+                <p>За гру ви можете використати 2 підказки: "50/50" та "Дзвінок другу"</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-footer-button button-accept" id="start-modal-btn">Почати гру</button>
+            </div>
+        </div>    
+    </div>
+    <div class="wrapper" id="after-round-modal">
+        <div class="modal">
+            <div class="modal-header">ПРОДОВЖУЄМ ГРАТИ?</div>
+            <div class="modal-main"></div>
+            <div class="modal-footer">
+                <button class="modal-footer-button button-cancel">Забрати гроші</button>
+                <button class="modal-footer-button button-accept">Продовжити</button>
+            </div>
+        </div>    
+    </div>
+    <div class="wrapper" id="finish-modal">
+        <div class="modal">
+            <div class="modal-header">КІНЕЦЬ ГРИ</div>
+            <div class="modal-main"></div>
+            <div class="modal-footer">
+                <button class="modal-footer-button button-cancel">Завершити гру</button>
+            </div>
+        </div>    
+    </div>
+
+    
+    <script src="../scripts/millionaire.js"></script>
+</body>
+</html>

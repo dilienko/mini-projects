@@ -1,0 +1,436 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+nav, footer, header, main, section {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.millionaire {
+  width: calc(310px + 1020 * ((100vw - 319px) / 1581));
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  background: rgb(45, 41, 112);
+  background: radial-gradient(circle, rgb(45, 41, 112) 0%, rgb(39, 26, 94) 50%, rgb(17, 6, 50) 84%, rgb(14, 3, 40) 100%);
+}
+
+.millionaire__logo {
+  width: calc(260px + 120 * ((100vw - 319px) / 1581));
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 0px 12px 1px rgb(101, 164, 216), -3px 0px 17px 1px rgb(101, 164, 216);
+          box-shadow: 3px 0px 12px 1px rgb(101, 164, 216), -3px 0px 17px 1px rgb(101, 164, 216);
+}
+.millionaire__logo img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.millionaire__timer {
+  width: calc(57px + 28 * ((100vw - 319px) / 1581));
+  padding: 20px 15px 15px;
+  text-align: center;
+  aspect-ratio: 1/1;
+  border: 3px solid white;
+  color: gold;
+  font-size: calc(20px + 20 * ((100vw - 319px) / 1581));
+  border-radius: 50%;
+  position: relative;
+}
+
+.millionaire__question {
+  width: calc(300px + 740 * ((100vw - 319px) / 1581));
+  aspect-ratio: 239/24;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-image: url(../images/question.png);
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.millionaire__question-text {
+  width: 70%;
+  text-align: center;
+  font-size: calc(18px + 4 * ((100vw - 319px) / 1581));
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+.millionaire__answers {
+  width: calc(280px + 520 * ((100vw - 319px) / 1581));
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.millionaire__answer {
+  width: 50%;
+  aspect-ratio: 188/19;
+  position: relative;
+  background-size: 100% 100%;
+}
+.millionaire__answer span {
+  position: absolute;
+  color: gold;
+  font-weight: 700;
+}
+.millionaire__answer:nth-child(odd) {
+  background-image: url(../images/answer_left.png);
+}
+.millionaire__answer:nth-child(odd) span {
+  top: 50%;
+  left: 20%;
+  -webkit-transform: translate(-30%, -50%);
+          transform: translate(-30%, -50%);
+}
+.millionaire__answer:nth-child(odd) button {
+  margin-right: 4%;
+  margin-left: 14%;
+}
+.millionaire__answer:nth-child(even) {
+  background-image: url(../images/answer_right.png);
+}
+.millionaire__answer:nth-child(even) span {
+  top: 50%;
+  left: 10%;
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
+}
+.millionaire__answer:nth-child(even) button {
+  margin-right: 14%;
+  margin-left: 4%;
+}
+
+.millionaire__answer-text {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-size: calc(12px + 9 * ((100vw - 319px) / 1581));
+  font-weight: 700;
+  outline: none;
+}
+
+@media screen and (max-width: 767px) {
+  .millionaire__answer {
+    width: 100%;
+  }
+  .millionaire__answer:nth-child(even) {
+    background-image: url(../images/answer_left.png);
+  }
+  .millionaire__answer:nth-child(even) span {
+    top: 50%;
+    left: 20%;
+    -webkit-transform: translate(-30%, -50%);
+            transform: translate(-30%, -50%);
+  }
+  .millionaire__answer:nth-child(even) button {
+    margin-right: 4%;
+    margin-left: 14%;
+  }
+}
+.millionaire__prize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  top: 3%;
+  right: 12%;
+  padding: 5px calc(0px + 10 * ((100vw - 319px) / 1581));
+  border: 2px dotted white;
+  border-radius: 15px;
+}
+
+.millionaire__sum {
+  letter-spacing: 2px;
+  display: inline-lock;
+  width: 100%;
+  text-align: right;
+  padding: 3px 8px;
+  margin-top: 4px;
+  -webkit-clip-path: polygon(100% 0, 100% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0);
+          clip-path: polygon(100% 0, 100% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0);
+  font-weight: 600;
+  font-size: larger;
+}
+.millionaire__sum:nth-child(5n) {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.millionaire__hints {
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  width: calc(60px + 20 * ((100vw - 319px) / 1581));
+}
+
+.millionaire__hint {
+  display: block;
+  background: rgb(69, 62, 176);
+  background: radial-gradient(circle, rgb(75, 66, 190) 0%, rgb(66, 42, 161) 50%, rgb(47, 16, 131) 84%, rgb(39, 7, 116) 100%);
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 12px;
+  border-radius: 50%;
+  border: 1px solid rgb(147, 148, 197);
+  font-size: calc(12px + 10 * ((100vw - 319px) / 1581));
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.millionaire__hint:hover {
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+  -webkit-transform: scale(97%);
+          transform: scale(97%);
+}
+
+.millionaire__hints-mobile, .millionaire-prize-mobile {
+  display: none;
+}
+
+.millionaire__center-line {
+  width: calc(300px + 540 * ((100vw - 319px) / 1581));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.modal {
+  width: calc(300px + 400 * ((100vw - 319px) / 1581));
+  background-color: white;
+  height: 33vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#start-modal {
+  display: block;
+}
+
+.modal-header, .modal-footer {
+  width: 100%;
+  height: 20%;
+  background-color: rgb(33, 33, 128);
+  font-size: larger;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-main {
+  width: 100%;
+  height: 60%;
+  padding: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgb(15, 15, 46);
+  font-size: calc(16px + 3 * ((100vw - 319px) / 1581));
+  font-weight: 500;
+  text-align: center;
+}
+.modal-main p {
+  color: inherit;
+  text-align: inherit;
+}
+
+.modal-footer-button {
+  display: inline-block;
+  width: 30%;
+  padding: 2px 10px;
+  height: 60%;
+  border-radius: 15px;
+  margin: 0 5%;
+  font-size: calc(14px + 5 * ((100vw - 319px) / 1581));
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.modal-footer-button:hover {
+  -webkit-transform: scale(97%);
+          transform: scale(97%);
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.button-accept {
+  background-color: rgb(27, 99, 27);
+}
+
+.button-cancel {
+  background-color: rgb(150, 35, 35);
+}
+
+@media screen and (max-width: 1023.99px) {
+  .millionaire__hints, .millionaire__prize {
+    display: none;
+  }
+
+  .millionaire__hints-mobile {
+    width: calc(100px + 60 * ((100vw - 319px) / 1581));
+    display: block;
+  }
+
+  .millionaire__hint {
+    display: inline-block;
+    width: 45%;
+    margin: 0;
+  }
+  .millionaire__hint:nth-child(1) {
+    float: left;
+  }
+  .millionaire__hint:nth-child(2) {
+    float: right;
+  }
+
+  .millionaire__center-line {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .millionaire-prize-mobile {
+    display: block;
+    font-size: calc(16px + 8 * ((100vw - 319px) / 1581));
+    font-weight: 700;
+    width: calc(100px + 60 * ((100vw - 319px) / 1581));
+    text-align: center;
+  }
+}

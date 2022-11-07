@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOMIZER</title>
+    <link rel="stylesheet" href="../styles/randomizer.css">
+    <link rel="shortcut icon" href="../images/randomizer-logo.png" type="image/png">
+</head>
+<body>
+    <header class="randomizer_header">RANDOMIZER</header>
+    <div class="randomizer">
+        <div class="randomizer__settings">
+            <div class="randomizer__input">
+                <label for="from" class="randomizer__input-text" >From: </label>
+                <input type="text" placeholder="0" class="randomizer__input-field" id="from" oninput="processInput(event)">
+            </div>
+            <div class="randomizer__input">
+                <label for="to" class="randomizer__input-text">To: </label>
+                <input type="text" placeholder="2" class="randomizer__input-field" id="to" oninput="processInput(event)"">
+            </div>
+            <div class="randomizer__input">
+                <label for="amount" class="randomizer__input-text" >Amount numbers: </label>
+                <input type="text" placeholder="1" class="randomizer__input-field" id="amount" autocomplete="off" oninput="processAmountInput(event)">
+            </div>
+            <div class="randomizer__checkbox">
+                
+                <input type="checkbox" id="unique" name="unique" value="unique">
+                <label for="unique"> Only unique numbers</label>
+            </div>
+            <button class="randomizer__button">Generate</button>
+        </div>
+        <div class="randomizer__output"></div>
+    </div>
+    
+    <script src="../scripts/randomizer.js"></script>
+</body>
+</html>
